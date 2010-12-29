@@ -20,7 +20,7 @@
       ]
     }
   ]
-, "description": "This extension removes all the site annoying site banners (featuring Jimmy Wales, or any other random encounter among the Wikipedia editors, founders or otherwise) from all Wikipedia and other Wikimedia sites. This extension is licensed under the Creative Commons Attribution ShareAlike 3.0 Unported License, as is the picture of Jimbo in its icon."
+, "description": "This extension removes all the annoying site banners (featuring Jimmy Wales, or any other random encounter among the Wikipedia editors, founders or otherwise) from Wikipedia and all other Wikimedia sites. Licensed under the Creative Commons Attribution ShareAlike 3.0 Unported License, as is the picture of Jimbo in its icon."
 , "name": "Banner free Wikipedia"
 , "version": "1.2"
 , "license": "Creative Commons Attribution ShareAlike 3.0 Unported License"
