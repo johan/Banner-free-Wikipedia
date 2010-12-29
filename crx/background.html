@@ -1,0 +1,6 @@
+<!DOCTYPE html><html><head><script>
+chrome.extension.onRequest.addListener(function show(req, from, sendResponse) {
+  chrome.pageAction.show(from.tab.id);
+  sendResponse({});
+});
+</script></head></html>
