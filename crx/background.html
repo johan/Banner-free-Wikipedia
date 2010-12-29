@@ -1,6 +1,27 @@
 <!DOCTYPE html><html><head><script>
+// documents with Wikimedia banners notify us to turn on their page action icon
 chrome.extension.onRequest.addListener(function show(req, from, sendResponse) {
-  chrome.pageAction.show(from.tab.id);
+  var tab = from.tab, host = hostname(tab.url), title =
+    'Click to toggle the Wikimedia banner.\n' +
+    'Removed so far: '+ inc('Σ') +' ('+ inc(host) +' at '+ host +')';
+  chrome.pageAction.setTitle({ tabId: tab.id, title: title });
+  chrome.pageAction.show(tab.id); // show the page action icon
   sendResponse({});
 });
+
+// and when the user clicks that icon, have the content script toggle the banner
+chrome.pageAction.onClicked.addListener(function toggle(tab) {
+  chrome.tabs.sendRequest(tab.id, {}, function(response) {});
+});
+
+// add 1 to this couter in localStorage
+function inc(id) {
+  return localStorage[id] = 1 + Number(localStorage[id] || 0);
+}
+
+function hostname(url) {
+  var  a = document.createElement('a');
+  a.href = url;
+  return a.hostname;
+}
 </script></head></html>
