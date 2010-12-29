@@ -1,0 +1,29 @@
+{ "content_scripts":
+  [
+    { "css":
+      [ "banner-free.css"
+      ]
+    , "matches":
+      [ "*://*.mediawiki.org/*"
+      , "*://*.wikibooks.org/*"
+      , "*://*.wikimedia.org/*"
+      , "*://*.wikimediafoundation.org/*"
+      , "*://*.wikinews.org/*"
+      , "*://*.wikipedia.org/*"
+      , "*://*.wikiquote.org/*"
+      , "*://*.wikisource.org/*"
+      , "*://*.wikiversity.org/*"
+      , "*://*.wiktionary.org//*"
+      ]
+    }
+  ]
+, "description": "This extension removes all the site annoying site banners (featuring Jimmy Wales, or any other random encounter among the Wikipedia editors, founders or otherwise) from all Wikipedia and other Wikimedia sites. This extension is licensed under the Creative Commons Attribution ShareAlike 3.0 Unported License, as is the picture of Jimbo in its icon."
+, "name": "Banner free Wikipedia"
+, "version": "1.0"
+, "license": "Creative Commons Attribution ShareAlike 3.0 Unported License"
+, "icons":
+  { "128": "128.png"
+  , "48": "48.png"
+  , "16": "16.png"
+  }
+}

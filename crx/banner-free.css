@@ -1,0 +1,4 @@
+/* thanks, but no thanks */
+#siteNotice *[id*=Banner] {
+  display: none !important;
+}
