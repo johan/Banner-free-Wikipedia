@@ -13,11 +13,14 @@ function changed(e) {
   }
 
   var banner = site_notice.querySelector('*[id*=Banner], *[class*=banner]');
-  // console.warn('Site notice changed; banner:', banner);
+  console.warn('Site notice changed; banner:', banner);
 
   if (banner) { // banner confirmed; stop waiting and pop the page action icon
     site_notice.removeEventListener('DOMSubtreeModified', changed, false);
-    banner = site_notice; // treat the whole thing as the banner (for now)
+    if (/Banner/.test(banner.id || ''))
+      site_notice.style.display = 'block !important'; // unhide the root one
+    else
+      banner = site_notice; // treat the whole thing as the banner (for now)
     chrome.extension.sendRequest({}, function(response) {});
     chrome.extension.onRequest.addListener(pageActionClick);
   }
