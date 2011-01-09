@@ -1,10 +1,12 @@
-If Wikimedia's banners asking for donations did not get so much in the
-way of using the sites they are on, this extension would not exist,
-and you would not be looking for it. As it is, though, you can at
-least install this extension to remove them, across all language
-versions of all of the Wikimedia sites.
+This Chrome extension folds the site banner on Wikipedia, and all other
+Wikimedia sites (Wikimedia, Wiktionary, WikiQuote, WikiBooks, WikiSource,
+WikiNews, Wikiversity, WikiSpecies, MediaWiki, Wikimedia Commons, et c).
+
+When a site banner is removed, a little page icon with a crossed-over
+Jim Wales shows up at the far right of the page's address field, which,
+if clicked, toggles the banner back on (and off), for the current page.
 
 This extension is licensed under the Creative Commons Attribution
 ShareAlike 3.0 Unported License, as is the picture of Jimbo featured
 in its icon and screen shots. Full source code and revision history is
-available on the Developer website below.
+available on Github, at https://github.com/johan/Banner-free-Wikipedia
