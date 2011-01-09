@@ -1,5 +1,4 @@
 /* thanks, but no thanks */
-#siteNotice, /* (when not a banner, the user script undoes the damage for us) */
-#siteNotice *[id*=Banner] {
+#siteNotice #centralNotice {
   display: none !important;
 }

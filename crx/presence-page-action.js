@@ -1,6 +1,5 @@
-var site_notice = document.getElementById('siteNotice');
-if (site_notice)
-  site_notice.addEventListener('DOMSubtreeModified', changed, false);
+var banner = document.querySelector('#siteNotice #centralNotice');
+if (banner) banner.addEventListener('DOMSubtreeModified', changed, false);
 
 // await the banner's jQuery-mediated insertion, and then:
 function changed(e) {
@@ -9,21 +8,12 @@ function changed(e) {
   }
 
   function pageActionClick(req, from, sendResponse) {
-    if (!from.tab) toggle(); // only react to the background page
+    if (!from.tab) toggle(); // only reacts to messages from the background page
   }
 
-  var banner = site_notice.querySelector('*[id*=Banner], *[class*=banner]');
-  console.warn('Site notice changed; banner:', banner);
-
-  if (banner) { // banner confirmed; stop waiting and pop the page action icon
-    site_notice.removeEventListener('DOMSubtreeModified', changed, false);
-    if (/Banner/.test(banner.id || ''))
-      site_notice.style.display = 'block !important'; // unhide the root one
-    else
-      banner = site_notice; // treat the whole thing as the banner (for now)
+  if ((banner.querySelector('*[id*=Banner], *[class*=banner]'))) {
+    banner.removeEventListener('DOMSubtreeModified', changed, false);
     chrome.extension.sendRequest({}, function(response) {});
     chrome.extension.onRequest.addListener(pageActionClick);
   }
-  else
-    site_notice.style.display = 'block !important'; // avoid false positives
 }

@@ -1,6 +1,5 @@
 { "content_scripts":
-  [
-    { "css":
+  [ { "css":
       [ "banner-free.css"
       ]
     , "js":
@@ -22,7 +21,7 @@
   ]
 , "description": "This extension removes all Wikipedia site banners (featuring Jimmy Wales, editors, founders or otherwise) from all Wikimedia sites."
 , "name": "Banner free Wikipedia"
-, "version": "1.6"
+, "version": "1.7"
 , "license": "Creative Commons Attribution ShareAlike 3.0 Unported License"
 , "icons":
   { "128": "128.png"
